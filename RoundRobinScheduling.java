@@ -110,4 +110,17 @@ public class RoundRobinScheduling {
 
         sc.close();
     }
+
 }
+
+
+// Enter number of processes: 4
+// Enter arrival time of process 1: 0
+// Enter burst time of process 1: 5
+// Enter arrival time of process 2: 1
+// Enter burst time of process 2: 3
+// Enter arrival time of process 3: 2
+// Enter burst time of process 3: 8
+// Enter arrival time of process 4: 3
+// Enter burst time of process 4: 6
+// Enter Time Quantum: 2
