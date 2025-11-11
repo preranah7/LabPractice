@@ -1,0 +1,73 @@
+Public Module addm
+
+    ' Function to add two numbers
+    Public Function add(ByVal n1 As Integer, ByVal n2 As Integer) As Integer
+        Return (n1 + n2)
+    End Function
+
+    ' Function to subtract two numbers
+    Public Function substraction(ByVal n1 As Integer, ByVal n2 As Integer) As Integer
+        Return (n1 - n2)
+    End Function
+
+    ' Function to multiply two numbers
+    Public Function mul(ByVal n1 As Integer, ByVal n2 As Integer) As Integer
+        Return (n1 * n2)
+    End Function
+
+    ' Function to divide two numbers
+    Public Function div(ByVal n1 As Integer, ByVal n2 As Integer) As Double
+        Return (n1 / n2)
+    End Function
+
+End Module
+
+
+
+Save it as - addm.vb
+
+//install net compiler if not there
+sudo apt update
+sudo apt install mono-complete
+
+//compile the program
+vbnc addm.vb 
+mono addm.exe
+
+________________________________________________________________________________________________________
+
+//If you only want a DLL instead of .exe , Then compile it as a library:
+vbnc /target:library addm.vb
+//you will get
+addm.dll
+Compilation successful
+
+//Create the main program that uses this DLL
+File 2 → use_addm.vb
+
+Imports System
+Imports addm   ' Import your module from the DLL
+
+Public Module mainProgram
+    Sub Main()
+        Console.WriteLine("Addition: " & add(10, 5))
+        Console.WriteLine("Subtraction: " & substraction(10, 5))
+        Console.WriteLine("Multiplication: " & mul(10, 5))
+        Console.WriteLine("Division: " & div(10, 5))
+    End Sub
+End Module
+
+//Compile the main program with the DLL reference
+
+//Now compile use_addm.vb and tell VB to link with your DLL:
+
+vbnc /reference:addm.dll use_addm.vb
+
+That produces:
+
+use_addm.exe
+
+//Run the program
+//execute it using Mono:
+
+mono use_addm.exe
