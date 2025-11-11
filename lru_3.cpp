@@ -87,4 +87,10 @@ int main() {
     cout << "\nFault Ratio (%)   : " << lru.getFaultRatio() << endl;
 
     return 0;
+
 }
+
+Enter number of frames: 3
+Enter number of page references: 12
+Enter the page reference string:
+1 2 3 2 4 1 5 2 1 2 3 4
