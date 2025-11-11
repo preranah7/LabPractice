@@ -82,4 +82,10 @@ int main() {
     cout << "\nFault Ratio (%)   : " << fifo.getMissRatio() << endl;
 
     return 0;
+
 }
+
+// Enter the number of frames: 3
+// Enter the number of page references: 10
+// Enter the page reference string:
+// 7 0 1 2 0 3 0 4 2 3
