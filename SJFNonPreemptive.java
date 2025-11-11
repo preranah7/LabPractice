@@ -81,3 +81,15 @@ public class SJFNonPreemptive {
         sc.close();
     }
 }
+
+
+// Enter number of processes: 4
+// Enter arrival time of process 1: 0
+// Enter burst time of process 1: 8
+// Enter arrival time of process 2: 1
+// Enter burst time of process 2: 4
+// Enter arrival time of process 3: 2
+// Enter burst time of process 3: 9
+// Enter arrival time of process 4: 3
+// Enter burst time of process 4: 5
+
